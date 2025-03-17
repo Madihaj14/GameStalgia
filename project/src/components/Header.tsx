@@ -70,10 +70,8 @@ export function Header({ player, showRegistration }: HeaderProps) {
               <div className="p-8 bg-arcade-bg/40">
                 <div className="prose prose-invert max-w-none">
                   <p className="text-arcade-text/90 leading-relaxed mb-8 text-lg">
-                    Hey there! Welcome to GameStalgia. I built this arcade with passion for fun, 
-                    nostalgia, and coding magic. These classic games have been reimagined with 
-                    modern touches while keeping their original charm. Hope you enjoy playing as 
-                    much as I did creating it! Keep smashing those high scores! 🚀
+                    Hey there! Welcome to GameStalgia. Like every aspiring developer, I began my coding journey with small projects—Tic-Tac-Toe, Snake, and Rock-Paper-Scissors. While building my first website, I wanted to create something that brought together everything I had learned so far. 
+                    That’s when the idea of an arcade struck me—a place where these simple yet nostalgic games live on. For every 90s kid who spent hours on their first computer, this is a trip down memory lane, wrapped in code. 🚀
                   </p>
                   
                   <div className="space-y-6 text-sm text-arcade-text/80">
