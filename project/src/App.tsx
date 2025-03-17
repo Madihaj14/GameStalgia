@@ -129,7 +129,7 @@ function App() {
       <footer className="relative z-20 mt-16 text-center">
         <div className="flex justify-center items-center gap-6 mb-4">
           <a
-            href="https://github.com/yourusername"
+            href="https://github.com/Madihaj14/GameStalgia"
             target="_blank"
             rel="noopener noreferrer"
             className="text-arcade-text/60 hover:text-arcade-cyan transition-colors duration-300"
@@ -137,7 +137,7 @@ function App() {
             <Github size={24} />
           </a>
           <a
-            href="https://linkedin.com/in/yourusername"
+            href="https://www.linkedin.com/in/madiha-khan14/"
             target="_blank"
             rel="noopener noreferrer"
             className="text-arcade-text/60 hover:text-arcade-cyan transition-colors duration-300"
