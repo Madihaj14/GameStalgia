@@ -1,0 +1,212 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+
+@layer base {
+  body {
+    @apply bg-arcade-bg text-arcade-text;
+    font-family: 'Press Start 2P', system-ui;
+  }
+}
+
+@layer components {
+  .neon-text {
+    @apply font-bold;
+    text-shadow: 0 0 2px theme('colors.arcade.cyan'),
+                 0 0 4px theme('colors.arcade.cyan'),
+                 0 0 8px theme('colors.arcade.purple');
+    animation: neonPulse 2s ease-in-out infinite;
+  }
+
+  @keyframes neonPulse {
+    0%, 100% {
+      text-shadow: 0 0 2px theme('colors.arcade.cyan'),
+                   0 0 4px theme('colors.arcade.cyan'),
+                   0 0 8px theme('colors.arcade.purple');
+    }
+    50% {
+      text-shadow: 0 0 4px theme('colors.arcade.cyan'),
+                   0 0 8px theme('colors.arcade.cyan'),
+                   0 0 16px theme('colors.arcade.purple');
+    }
+  }
+  
+  .game-card {
+    @apply relative overflow-hidden rounded-lg p-6 
+           transition-all duration-500
+           bg-gradient-to-br from-arcade-bg/95 to-arcade-bg/80
+           hover:from-arcade-purple/20 hover:to-arcade-cyan/20
+           border border-arcade-purple/30 hover:border-arcade-cyan
+           transform hover:scale-105 backdrop-blur-sm;
+  }
+
+  .game-card::before {
+    @apply content-[''] absolute inset-0 opacity-0 
+           transition-opacity duration-500
+           bg-gradient-to-br from-arcade-purple/10 to-arcade-cyan/10;
+  }
+
+  .game-card:hover::before {
+    @apply opacity-100;
+  }
+
+  .game-card:hover {
+    box-shadow: 0 0 20px theme('colors.arcade.cyan'),
+                0 0 40px theme('colors.arcade.purple');
+  }
+
+  .arcade-btn {
+    @apply px-6 py-3 rounded-lg text-sm 
+           transition-all duration-300
+           bg-gradient-to-r from-arcade-purple to-arcade-cyan
+           hover:from-arcade-cyan hover:to-arcade-purple
+           border border-arcade-cyan/30 hover:border-arcade-purple/50
+           shadow-lg hover:shadow-arcade-cyan/30;
+  }
+
+  .game-icon {
+    @apply transition-all duration-300 transform;
+  }
+
+  .game-card:hover .game-icon {
+    @apply scale-110 text-arcade-cyan;
+    filter: drop-shadow(0 0 8px theme('colors.arcade.cyan'));
+  }
+
+  .game-title {
+    @apply transition-colors duration-300;
+  }
+
+  .game-card:hover .game-title {
+    @apply text-arcade-yellow;
+  }
+
+  .game-description {
+    @apply transition-colors duration-300 text-arcade-text/70;
+  }
+
+  .game-card:hover .game-description {
+    @apply text-arcade-text;
+  }
+
+  .score-card {
+    @apply bg-arcade-bg/95 p-6 rounded-lg border-2 border-arcade-purple/30
+           backdrop-blur-md shadow-lg;
+    box-shadow: 0 0 10px theme('colors.arcade.cyan'),
+                inset 0 0 20px theme('colors.arcade.purple/20');
+  }
+
+  .victory-text {
+    text-shadow: 0 0 4px theme('colors.arcade.yellow'),
+                 0 0 8px theme('colors.arcade.orange'),
+                 0 0 12px theme('colors.arcade.purple');
+    animation: textGlow 2s ease-in-out infinite;
+  }
+
+  @keyframes textGlow {
+    0%, 100% {
+      text-shadow: 0 0 4px theme('colors.arcade.yellow'),
+                   0 0 8px theme('colors.arcade.orange'),
+                   0 0 12px theme('colors.arcade.purple');
+    }
+    50% {
+      text-shadow: 0 0 8px theme('colors.arcade.yellow'),
+                   0 0 16px theme('colors.arcade.orange'),
+                   0 0 24px theme('colors.arcade.purple');
+    }
+  }
+
+  @keyframes bounce-fade-in {
+    0% {
+      opacity: 0;
+      transform: translateY(-20px);
+    }
+    50% {
+      opacity: 1;
+      transform: translateY(10px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  .animate-bounce-fade-in {
+    animation: bounce-fade-in 0.5s ease-out;
+  }
+
+  @keyframes fade-in {
+    from { opacity: 0; }
+    to { opacity: 1; }
+  }
+
+  @keyframes modal-in {
+    from {
+      opacity: 0;
+      transform: scale(0.95) translateY(-10px);
+    }
+    to {
+      opacity: 1;
+      transform: scale(1) translateY(0);
+    }
+  }
+
+  .animate-fade-in {
+    animation: fade-in 0.3s ease-out;
+  }
+
+  .animate-modal-in {
+    animation: modal-in 0.3s ease-out;
+  }
+
+  .rps-choice {
+    @apply arcade-btn relative overflow-hidden;
+  }
+
+  .rps-choice:hover .game-icon {
+    @apply scale-125 rotate-12;
+    filter: drop-shadow(0 0 8px theme('colors.arcade.cyan'));
+  }
+
+  .winning-cell {
+    animation: winningPulse 2s infinite;
+  }
+
+  @keyframes winningPulse {
+    0%, 100% {
+      box-shadow: 0 0 10px theme('colors.arcade.cyan'),
+                  0 0 20px theme('colors.arcade.purple');
+    }
+    50% {
+      box-shadow: 0 0 20px theme('colors.arcade.cyan'),
+                  0 0 40px theme('colors.arcade.purple');
+    }
+  }
+
+  .food-glow {
+    animation: foodGlow 1s infinite;
+  }
+
+  @keyframes foodGlow {
+    0%, 100% {
+      box-shadow: 0 0 10px theme('colors.arcade.yellow'),
+                  0 0 20px theme('colors.arcade.orange');
+    }
+    50% {
+      box-shadow: 0 0 20px theme('colors.arcade.yellow'),
+                  0 0 40px theme('colors.arcade.orange');
+    }
+  }
+
+  .score-bounce {
+    animation: scoreBounce 0.5s ease-out;
+  }
+
+  @keyframes scoreBounce {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.2); }
+    100% { transform: scale(1); }
+  }
+}
