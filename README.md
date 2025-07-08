@@ -25,9 +25,3 @@ Check it out live: [https://gamestalgia14.vercel.app](https://gamestalgia14.verc
 ### Prerequisites
 - Node.js (v14+)
 - npm or yarn
-
-### Installation
-```bash
-git clone https://github.com/Madihaj14/GameStalgia.git
-cd GameStalgia
-npm install
