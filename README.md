@@ -6,7 +6,7 @@
 
 ## 🔗 Live Demo
 
-Check it out live: [https://gamestalgia14.vercel.app](https://gamestalgia14.vercel.app) :contentReference[oaicite:2]{index=2}
+Check it out live: [https://gamestalgia14.vercel.app](https://gamestalgia14.vercel.app)
 
 ---
 
