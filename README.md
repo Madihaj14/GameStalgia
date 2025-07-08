@@ -1,6 +1,6 @@
 # 🎮 GameStalgia
 
-**GameStalgia** is a mini arcade built with React, Tailwind CSS, and TypeScript. It features classic games—Tic‑Tac‑Toe, Snake, and Rock‑Paper‑Scissors—in a retro-themed UI with engaging animations. :contentReference[oaicite:1]{index=1}
+**GameStalgia** is a mini arcade built with React, Tailwind CSS, and TypeScript. It features classic games—Tic‑Tac‑Toe, Snake, and Rock‑Paper‑Scissors—in a retro-themed UI with engaging animations.
 
 ---
 
