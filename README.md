@@ -4,7 +4,7 @@
 
 ---
 
-  ## 🔗 Website Link
+  ## 🔗  Live Demo
 
 Check it out live: [https://gamestalgia14.vercel.app](https://gamestalgia14.vercel.app)
 
